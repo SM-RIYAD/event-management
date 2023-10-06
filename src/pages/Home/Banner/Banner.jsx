@@ -2,7 +2,7 @@
 
 const Banner = () => {
     return (
-        <div>
+        <div className="pb-20">
           <div className="hero min-h-screen" style={{backgroundImage: 'url(https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1769&q=80'}}>
   <div className="hero-overlay bg-opacity-60"></div>
   <div className="hero-content text-center text-neutral-content">
