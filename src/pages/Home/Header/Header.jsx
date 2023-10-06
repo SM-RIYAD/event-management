@@ -1,6 +1,14 @@
+import { NavLink } from "react-router-dom";
 
 
 const Header = () => {
+  const navLinks = <>
+        <li><NavLink to="/">Home</NavLink></li>
+        <li><NavLink to="/blogs">Blogs</NavLink></li>
+        <li><NavLink to="/review">Review</NavLink></li>
+     
+    
+    </>
     return (
         <div className="">
             <div className="navbar  bg-base-100 max-w-6xl mx-auto">
@@ -25,17 +33,7 @@ const Header = () => {
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
-      <li><a>Item 1</a></li>
-      <li tabIndex={0}>
-        <details>
-          <summary>Parent</summary>
-          <ul className="p-2">
-            <li><a>Submenu 1</a></li>
-            <li><a>Submenu 2</a></li>
-          </ul>
-        </details>
-      </li>
-      <li><a>Item 3</a></li>
+     {navLinks}
     </ul>
   </div>
   <div className="navbar-end">
