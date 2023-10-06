@@ -3,6 +3,7 @@ import Banner from "./Banner/Banner";
 import Header from "./Header/Header";
 import Event from "./Events/Event";
 import Footer from "../../Shared/Footer";
+import Positivereviews from "../../components/Positivereviews";
 
 
 const Home = () => {
@@ -35,6 +36,7 @@ events.map((event,idx) =><Event key={idx} event={event} > </Event> )
 
 
 </div>
+<Positivereviews></Positivereviews>
 
       </div>
       
