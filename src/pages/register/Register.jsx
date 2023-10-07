@@ -1,15 +1,54 @@
+import { useState,useContext } from "react";
 import { Link } from "react-router-dom";
-const handleRegister=(e)=>{
-e.preventDefault();
-const name= e.target.name.value;
-
-
-}
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { AuthContext } from "../../providers/AuthProvider";
+import Header from "../Home/Header/Header";
 
 const Register = () => {
-    return (
-        <div>
-          <div className="hero min-h-screen ">
+  const { createUser } = useContext(AuthContext);
+  const errorToast = (regError) =>
+    toast.error(regError, { position: "bottom-center" });
+
+    const SuccessToast = (successmsg) =>
+    toast.success(successmsg, { position: "bottom-center" });
+
+  const [regError, SetRegError] = useState("");
+
+  const handleRegister = (e) => {
+    e.preventDefault();
+    const name = e.target.name.value;
+    const password = e.target.password.value;
+    const photo = e.target.photo.value;
+    const email = e.target.email.value;
+
+    if (password.length < 6) {
+      errorToast("Password should be of at least 6 digits");
+      return;
+    } else if (!/[A-Z]/.test(password)) {
+      errorToast("Password should have at least one capital letter");
+      return;
+    } else if (!/[!@#$%^&*(),.?":{}|<>]/.test(password)) {
+      errorToast("Password should have at least one special character");
+      return;
+    } else{
+
+        createUser(email,password).then(result => {
+            console.log(result.user)
+            SuccessToast("user Created!")
+            
+        })
+        .catch(error => {
+            console.error(error)
+        })
+        
+    }
+  };
+  return (
+    <div>
+        <Header></Header>
+      <ToastContainer />
+      <div className="hero min-h-screen ">
         <div className="hero-content flex-col lg:flex-row-reverse">
           <div className="text-center lg:text-left h-1/2 w-1/2 ">
             <img
@@ -19,7 +58,7 @@ const Register = () => {
             />
           </div>
           <div className=" card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-            <form onSubmit={handleRegister}  className="card-body">
+            <form onSubmit={handleRegister} className="card-body">
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Email</span>
@@ -59,7 +98,6 @@ const Register = () => {
                 />
               </div>
 
-
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Password</span>
@@ -85,14 +123,13 @@ const Register = () => {
                 <button className="btn bg-red-600 btn-primary border-0 text-white">
                   Register
                 </button>
-              
               </div>
             </form>
           </div>
         </div>
       </div>
-        </div>
-    );
+    </div>
+  );
 };
 
 export default Register;

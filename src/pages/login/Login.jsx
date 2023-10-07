@@ -1,13 +1,57 @@
+import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
-
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { AuthContext } from "../../providers/AuthProvider";
+import Header from "../Home/Header/Header";
 const Login = () => {
+  const errorToast = (loginError) =>
+    toast.error(loginError, { position: "bottom-center" });
+
+  const SuccessToast = (successmsg) =>
+    toast.success(successmsg, { position: "bottom-center" });
+  const { signIn,googleSignIn } = useContext(AuthContext);
+ 
+ 
   const handleLogin = (e) => {
     e.preventDefault();
     let email = e.target.email.value;
-    console.log(name);
+
+    let password = e.target.password.value;
+
+    signIn(email, password)
+      .then((result) => {
+        console.log(result.user);
+
+        // navigate after login
+        SuccessToast("Successfully logged in !");
+      })
+      .catch((error) => {
+        console.error("this is ", error);
+
+        errorToast(error.message);
+      });
   };
+
+  const handleGoogleSignin=()=>{
+
+    googleSignIn() .then((result) => {
+      console.log("this is logged in user",result.user);
+
+      
+      SuccessToast("Successfully logged in !");
+    })
+    .catch((error) => {
+      console.error("this is ", error);
+
+      errorToast(error.message);
+    });
+
+  }
   return (
     <div className="">
+      <Header></Header>
+      <ToastContainer />
       <div className="hero min-h-screen ">
         <div className="hero-content flex-col lg:flex-row-reverse">
           <div className="text-center lg:text-left h-1/2 w-1/2 ">
@@ -56,11 +100,12 @@ const Login = () => {
                 <button className="btn bg-red-600 btn-primary border-0 text-white">
                   Login
                 </button>
-                <button className="btn mt-5 bg-red-600 btn-primary border-0 text-white">
-                  Log In With Google
-                </button>
+               
               </div>
             </form>
+            <button onClick={handleGoogleSignin} className="btn mt-5 bg-red-600 btn-primary border-0 text-white">
+                  Log In With Google
+                </button>
           </div>
         </div>
       </div>
