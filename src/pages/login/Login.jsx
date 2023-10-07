@@ -21,6 +21,12 @@ const Login = () => {
 
     let password = e.target.password.value;
 
+    if(email.length===0 || password.length===0){
+      errorToast("Fields cannot be empty!");
+      return;
+
+    }
+
     signIn(email, password)
       .then((result) => {
         console.log(result.user);
@@ -77,7 +83,7 @@ const Login = () => {
                   name="email"
                   placeholder="email"
                   className="input input-bordered"
-                  required
+             
                 />
               </div>
               <div className="form-control">
@@ -89,7 +95,7 @@ const Login = () => {
                   name="password"
                   placeholder="password"
                   className="input input-bordered"
-                  required
+                  
                 />
                 <label className="flex justify-start">
                   {" "}
@@ -107,10 +113,13 @@ const Login = () => {
                 </button>
                
               </div>
-            </form>
-            <button onClick={handleGoogleSignin} className="btn mt-5 bg-red-600 btn-primary border-0 text-white">
+              <button onClick={handleGoogleSignin} className="form-control btn mt-5 bg-red-600 btn-primary border-0 text-white">
                   Log In With Google
                 </button>
+            </form> 
+      
+            
+           
           </div>
         </div>
       </div>

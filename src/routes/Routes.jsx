@@ -5,6 +5,8 @@ import EventDetails from "../components/EventDetails";
 import Login from "../pages/login/Login";
 import Register from "../pages/register/Register";
 import PrivateRoute from "./PrivateRoute";
+import Blog from "../components/Blog";
+import Opinion from "../pages/opinion/Opinion";
 
 
 
@@ -24,6 +26,17 @@ const router = createBrowserRouter([
                 loader: () => fetch('/events.json')
             
             }, 
+
+            {
+                path: '/blog', 
+                element: <PrivateRoute><Blog/></PrivateRoute>,
+                
+            },
+            {
+                path: '/opinion', 
+                element: <PrivateRoute><Opinion/></PrivateRoute>,
+                
+            },
             {
                 path: '/login',
                 element: <Login/>, 

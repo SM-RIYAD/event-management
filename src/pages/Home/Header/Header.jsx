@@ -20,23 +20,23 @@ console.log("photo url",user?.photoURL);
         <NavLink to="/">Home</NavLink>
       </li>
       <li className="pt-4">
-        <NavLink to="/blogs">Blogs</NavLink>
+        <NavLink to="/blog">Blogs</NavLink>
       </li>
       <li className="pt-4">
-        <NavLink to="/review">Review</NavLink>
+        <NavLink to="/opinion">Opinion</NavLink>
       </li>
       <li>
 
           {
 
-            user&& <div className="flex gap-2 ">
-            <p className="font-bold">{user.displayName}</p>
-            <div className="avatar">
+            user&& <div className="flex gap-2 mt-3 ">
+           
+            <div className="rounded-full">
               <div className="w-12  rounded-full ">
-                <img src={user?.photoURL} />
+                <img className="rounded-full" src={user?.photoURL} />
               </div>
             </div>
-        
+            <p className="font-bold">{user.displayName}</p>
           </div>
           }
 
@@ -81,12 +81,12 @@ console.log("photo url",user?.photoURL);
         <div className="navbar-end">
           {/* <a className="btn">Login</a> */}
 
-          {user ? (
+          {user?.displayName? (
          
-              <button onClick={handleLogout} className="btn btn-secondary"> Logout</button>
+              <button onClick={handleLogout} className="btn btn-primary bg-red-400 text-white"> Logout</button>
            
           ) : (
-            <Link to={"/login"}><button className="btn btn-secondary"> Log in</button> </Link> 
+            <Link to={"/login"}><button className="btn  bg-red-400 text-white"> Log in</button> </Link> 
           )}
         </div>
       </div>
