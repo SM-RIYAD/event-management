@@ -1,10 +1,12 @@
 import { useState, useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { AuthContext } from "../../providers/AuthProvider";
 import Header from "../Home/Header/Header";
 const Login = () => {
+  const location = useLocation();
+  const navigate = useNavigate();
   const errorToast = (loginError) =>
     toast.error(loginError, { position: "bottom-center" });
 
@@ -23,8 +25,9 @@ const Login = () => {
       .then((result) => {
         console.log(result.user);
 
-        // navigate after login
+      
         SuccessToast("Successfully logged in !");
+        navigate(location?.state ? location.state : '/');
       })
       .catch((error) => {
         console.error("this is ", error);
@@ -40,6 +43,8 @@ const Login = () => {
 
       
       SuccessToast("Successfully logged in !");
+
+      navigate(location?.state ? location.state : '/');
     })
     .catch((error) => {
       console.error("this is ", error);

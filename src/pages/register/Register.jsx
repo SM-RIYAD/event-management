@@ -1,4 +1,4 @@
-import { useState,useContext } from "react";
+import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -6,11 +6,11 @@ import { AuthContext } from "../../providers/AuthProvider";
 import Header from "../Home/Header/Header";
 
 const Register = () => {
-  const { createUser } = useContext(AuthContext);
+  const { createUser, updateUser } = useContext(AuthContext);
   const errorToast = (regError) =>
     toast.error(regError, { position: "bottom-center" });
 
-    const SuccessToast = (successmsg) =>
+  const SuccessToast = (successmsg) =>
     toast.success(successmsg, { position: "bottom-center" });
 
   const [regError, SetRegError] = useState("");
@@ -18,6 +18,7 @@ const Register = () => {
   const handleRegister = (e) => {
     e.preventDefault();
     const name = e.target.name.value;
+    console.log("name in reg ", name);
     const password = e.target.password.value;
     const photo = e.target.photo.value;
     const email = e.target.email.value;
@@ -31,22 +32,31 @@ const Register = () => {
     } else if (!/[!@#$%^&*(),.?":{}|<>]/.test(password)) {
       errorToast("Password should have at least one special character");
       return;
-    } else{
-
-        createUser(email,password).then(result => {
-            console.log(result.user)
-            SuccessToast("user Created!")
-            
+    } else {
+      createUser(email, password)
+        .then((result) => {
+          console.log(result.user);
+          console.log("user created");
+          updateUser(name,photo).then((result) => {
+              console.log("profile updated",result);
+              SuccessToast("user Created!");
+              // ...
+            })
+            .catch((error) => {
+              // An error occurred
+              console.log("error in update", error.message);
+              errorToast(error.message);
+              // ...
+            });
         })
-        .catch(error => {
-            console.error(error)
-        })
-        
+        .catch((error) => {
+          console.error("THIS IS ERROR IN REG ", error);
+        });
     }
   };
   return (
     <div>
-        <Header></Header>
+      <Header></Header>
       <ToastContainer />
       <div className="hero min-h-screen ">
         <div className="hero-content flex-col lg:flex-row-reverse">
