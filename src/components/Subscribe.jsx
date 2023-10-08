@@ -2,7 +2,7 @@ import React from 'react';
 
 const Subscribe = () => {
     return (
-        <div  className='bg-opacity-60' style={{backgroundImage: 'url(https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1769&q=80',opacity:.9}} >
+        <div  className='bg-opacity-60' style={{backgroundImage: 'url(https://images.unsplash.com/photo-1513151233558-d860c5398176?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8c29jaWFsJTIwZXZlbnR8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60',opacity:.9}} >
 <div className="hero min-h-screen bg-opacity-60 hero-overlay  ">
   <div className="hero-content gap-10 flex-col lg:flex-row">
     <div className="text-center lg:text-left">

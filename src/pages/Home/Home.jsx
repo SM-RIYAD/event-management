@@ -26,7 +26,17 @@ const Home = () => {
    
       <div className="bg-slate-300">
       <Banner></Banner>
+
+      <div className="bg-red-500 flex items-center justify-center  h-20 my-10  text-white w-full">
+      <h1 className="   text-center text-4xl font-bold ">Services</h1>
+      </div>
+   
+    
+
+    
+   
       <div className="  grid pb-32  gap-10 lg:max-w-6xl lg:mx-auto mx-5 grid-cols-1  lg:grid-cols-2">
+     
 
 {
 

@@ -44,8 +44,8 @@ console.log("photo url",user?.photoURL);
     </>
   );
   return (
-    <div className="">
-      <div className="navbar  bg-base-100 max-w-6xl mx-auto">
+    <div className=" bg-red-500   ">
+      <div className="navbar  lg:max-w-6xl mx-auto   ">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
