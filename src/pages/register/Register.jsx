@@ -60,7 +60,7 @@ const Register = () => {
       <ToastContainer />
       <div className="hero min-h-screen ">
         <div className="hero-content flex-col lg:flex-row-reverse">
-          <div className="text-center lg:text-left h-1/2 w-1/2  ">
+          <div className="text-center lg:text-left h-1/2 w-1/2 lg:block hidden  ">
             <img
               className="h-full object-cover"
               src="https://i.ibb.co/dDYVyz5/vecteezy-cloud-computing-modern-flat-concept-for-web-banner-design-5879539.jpg"
@@ -119,7 +119,7 @@ const Register = () => {
                   className="input input-bordered"
                   required
                 />
-                <label className="flex justify-start">
+                <label className="flex mt-2 justify-start">
                   {" "}
                   <p>
                     Have an account?

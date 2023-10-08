@@ -68,7 +68,7 @@ const Login = () => {
       <ToastContainer />
       <div className="hero min-h-screen ">
         <div className="hero-content flex-col lg:flex-row-reverse">
-          <div className="text-center lg:text-left h-1/2 w-1/2  ">
+          <div className="text-center lg:block hidden lg:text-left h-1/2 w-1/2  ">
             <img
               className="h-full object-cover"
               src="https://i.ibb.co/dDYVyz5/vecteezy-cloud-computing-modern-flat-concept-for-web-banner-design-5879539.jpg"
@@ -107,7 +107,7 @@ const Login = () => {
                   className="input input-bordered"
                   
                 />
-                <label className="flex justify-start">
+                <label className="flex justify-start mt-2">
                   {" "}
                   <p>
                     New to the web site?

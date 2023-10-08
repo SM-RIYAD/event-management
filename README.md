@@ -1,7 +1,9 @@
 
-Social Event Management
+<h2>Social Event Management</h2 >
+Live website link : "https://social-eveent-management-riyad-a9.surge.sh/"
 
-This is a project about social event management.
+
+
 
 Some bullet points mentioning different features and functionalities of My   website:
 
