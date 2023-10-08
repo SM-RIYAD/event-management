@@ -18,7 +18,8 @@ console.log(greetign);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer:B ReferenceError: greetign is not defined.
+?
 
 <i>
 The correct answer is B: ReferenceError: greetign is not defined.
@@ -46,9 +47,9 @@ sum(1, "2");
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer:C: "12" 
 
-<i>Write your explanation here</i>
+<i>In JavaScript, when you use the + operator with a string and a number, JavaScript converts the number to a string and performs string concatenation. In this case, the number 1 is implicitly converted to a string, and then it is concatenated with the string "2", resulting in the string "12".</i>
 
 </p>
 </details>
@@ -72,9 +73,9 @@ console.log(food);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: A: ['🍕', '🍫', '🥑', '🍔'].
 
-<i>Write your explanation here</i>
+<i>The info object holds a reference to the original array food, not a copy of it. When info.favoriteFood is changed to "🍝", it doesn't affect the original food array. Therefore, the console.log(food) statement will output the original array, which is ['🍕', '🍫', '🥑', '🍔'].</i>
 
 </p>
 </details>
@@ -97,9 +98,9 @@ console.log(sayHi());
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer:B: Hi there, undefined.
 
-<i>Write your explanation here</i>
+<i>In the sayHi function, there is a parameter name which is not given a default value. When you call sayHi() without passing any argument, the name parameter inside the function is undefined. Therefore, the function returns "Hi there, undefined".</i>
 
 </p>
 </details>
@@ -125,9 +126,9 @@ console.log(count);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer:  B: 2.
 
-<i>Write your explanation here</i>
+<i>In the given code, the forEach method iterates over the nums array. The if (num) statement checks if the current number is truthy (non-zero). For the array elements [0, 1, 2, 3], the numbers 1, 2, and 3 are truthy, so the count variable is incremented for each of these values. Therefore, the final value of count after the forEach loop is 2.</i>
 
 </p>
 </details>
