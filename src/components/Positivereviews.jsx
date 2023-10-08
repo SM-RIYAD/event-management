@@ -16,8 +16,10 @@ const Positivereviews = () => {
     
     return (
         <div className=' py-20'> 
-        <p className='text-4xl py-5 ps-5 font-bold text-center '> Recent Reviews</p>
-        
+        <p className='text-4xl pb-10 ps-5 font-bold text-center '> Recent Reviews</p>
+        {/* <div className="bg-green-500 flex items-center justify-center  h-20 my-10  text-white w-full">
+      <h1 className="   text-center text-4xl font-bold ">Positive Reviews</h1>
+      </div> */}
             <Marquee>
 
                 {

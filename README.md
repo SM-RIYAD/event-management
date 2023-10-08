@@ -1,6 +1,6 @@
 
 <h2>Social Event Management</h2 >
-Live website link : "https://social-eveent-management-riyad-a9.surge.sh/"
+Live website link : "https://social-event-management-43e36.firebaseapp.com/"
 
 
 

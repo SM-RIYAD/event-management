@@ -35,7 +35,7 @@ const Home = () => {
 
     
    
-      <div className="  grid pb-32  gap-10 lg:max-w-6xl lg:mx-auto mx-5 grid-cols-1  lg:grid-cols-2">
+      <div className="  grid pb-2  gap-10 lg:max-w-6xl lg:mx-auto mx-5 grid-cols-1  lg:grid-cols-2">
      
 
 {
