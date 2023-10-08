@@ -71,7 +71,7 @@ const Login = () => {
           <div className="text-center lg:text-left h-1/2 w-1/2  ">
             <img
               className="h-full object-cover"
-              src="/images/vecteezy_cloud-computing-modern-flat-concept-for-web-banner-design_5879539.jpg"
+              src="https://i.ibb.co/dDYVyz5/vecteezy-cloud-computing-modern-flat-concept-for-web-banner-design-5879539.jpg"
               alt=""
             />
           </div>
