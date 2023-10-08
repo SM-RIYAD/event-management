@@ -68,7 +68,7 @@ const Login = () => {
       <ToastContainer />
       <div className="hero min-h-screen ">
         <div className="hero-content flex-col lg:flex-row-reverse">
-          <div className="text-center lg:text-left h-1/2 w-1/2 lg:block hidden ">
+          <div className="text-center lg:text-left h-1/2 w-1/2  ">
             <img
               className="h-full object-cover"
               src="/images/vecteezy_cloud-computing-modern-flat-concept-for-web-banner-design_5879539.jpg"
