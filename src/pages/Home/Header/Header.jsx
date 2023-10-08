@@ -29,7 +29,7 @@ console.log("photo url",user?.photoURL);
 
           {
 
-            user&& <div className="flex gap-2 mt-3 ">
+            user&& <div className="flex gap-2 mt-2 ">
            
             <div className="rounded-full">
               <div className="w-12  rounded-full ">
@@ -66,7 +66,7 @@ console.log("photo url",user?.photoURL);
             </label>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              className="menu z-40 menu-sm dropdown-content mt-3  p-2 shadow bg-base-100 rounded-box w-52"
             >
            {navLinks}
             </ul>

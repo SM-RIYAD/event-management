@@ -4,6 +4,7 @@ import Header from "./Header/Header";
 import Event from "./Events/Event";
 import Footer from "../../Shared/Footer";
 import Positivereviews from "../../components/Positivereviews";
+import Subscribe from "../../components/Subscribe";
 
 
 const Home = () => {
@@ -37,6 +38,13 @@ events.map((event,idx) =><Event key={idx} event={event} > </Event> )
 
 </div>
 <Positivereviews></Positivereviews>
+
+<div className=" ">
+<Subscribe></Subscribe>
+
+</div>
+
+
 
       </div>
       

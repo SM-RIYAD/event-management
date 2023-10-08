@@ -20,8 +20,11 @@ const Login = () => {
     let email = e.target.email.value;
 
     let password = e.target.password.value;
+    let test = e.target.test.value;
 
     if(email.length===0 || password.length===0){
+
+     
       errorToast("Fields cannot be empty!");
       return;
 
@@ -85,6 +88,13 @@ const Login = () => {
                   className="input input-bordered"
              
                 />
+                    <input
+                  type="text"
+                  name="test"
+                  placeholder="test"
+                  className="input hidden input-bordered"
+             
+                />
               </div>
               <div className="form-control">
                 <label className="label">
@@ -113,7 +123,7 @@ const Login = () => {
                 </button>
                
               </div>
-              <button onClick={handleGoogleSignin} className="form-control btn mt-5 bg-red-600 btn-primary border-0 text-white">
+              <button onClick={handleGoogleSignin} className=" btn mt-5 bg-red-600 btn-primary border-0 text-white">
                   Log In With Google
                 </button>
             </form> 
