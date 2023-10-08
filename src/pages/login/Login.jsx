@@ -68,7 +68,7 @@ const Login = () => {
       <ToastContainer />
       <div className="hero min-h-screen ">
         <div className="hero-content flex-col lg:flex-row-reverse">
-          <div className="text-center lg:text-left h-1/2 w-1/2 ">
+          <div className="text-center lg:text-left h-1/2 w-1/2 lg:block hidden ">
             <img
               className="h-full object-cover"
               src="/images/vecteezy_cloud-computing-modern-flat-concept-for-web-banner-design_5879539.jpg"
@@ -123,10 +123,17 @@ const Login = () => {
                 </button>
                
               </div>
-              <button onClick={handleGoogleSignin} className=" btn mt-5 bg-red-600 btn-primary border-0 text-white">
+              {/* <button onClick={handleGoogleSignin} className=" btn mt-5 bg-red-600 btn-primary border-0 text-white">
+                  Log In With Google
+                </button> */}
+            </form> 
+            <div className="flex justify-center w-full">
+            <button onClick={handleGoogleSignin} className=" lg:w-[320px] w-[220px] btn mt-1 mb-5  bg-red-600 btn-primary border-0 text-white">
                   Log In With Google
                 </button>
-            </form> 
+
+            </div>
+           
       
             
            

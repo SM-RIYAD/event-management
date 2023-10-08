@@ -7,6 +7,7 @@ import Register from "../pages/register/Register";
 import PrivateRoute from "./PrivateRoute";
 import Blog from "../components/Blog";
 import Opinion from "../pages/opinion/Opinion";
+import Errorpgae from "../pages/Errorpage/Errorpgae";
 
 
 
@@ -14,6 +15,7 @@ const router = createBrowserRouter([
     {
         path: '/',
         element: <Root></Root>, 
+        errorElement:<Errorpgae/>,
         children: [
             {
                 path: '/',
