@@ -6,7 +6,7 @@ import { AuthContext } from "../../providers/AuthProvider";
 import Header from "../Home/Header/Header";
 
 const Register = () => {
-  const { createUser, updateUser } = useContext(AuthContext);
+  const { createUser, updateUser,logOut } = useContext(AuthContext);
   const errorToast = (regError) =>
     toast.error(regError, { position: "bottom-center" });
 
@@ -40,6 +40,7 @@ const Register = () => {
           updateUser(name,photo).then((result) => {
               console.log("profile updated",result);
               SuccessToast("user Created!");
+              logOut();
               // ...
             })
             .catch((error) => {

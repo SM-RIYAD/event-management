@@ -16,22 +16,22 @@ console.log("photo url",user?.photoURL);
 
   const navLinks = (
     <>
-      <li className="pt-4">
+      <li className={`${user ?'pt-10':'pt-5' } `} >
         <NavLink to="/">Home</NavLink>
       </li>
-      <li className="pt-4">
+      <li className={`${user ?'pt-10':'pt-5' } `}>
         <NavLink to="/blog">Blogs</NavLink>
       </li>
-      <li className="pt-4">
+      <li className={`${user ?'pt-10':'pt-5' } `}>
         <NavLink to="/opinion">Opinion</NavLink>
       </li>
       <li>
 
           {
 
-            user&& <div className="flex gap-2 mt-2 ">
+            user&& <div className=" lg:ms-10  flex items-center flex-col mt-2 gap-2  ">
            
-            <div className="rounded-full">
+            <div className="rounded-full ">
               <div className="w-12  rounded-full ">
                 <img className="rounded-full" src={user?.photoURL} />
               </div>
@@ -66,7 +66,7 @@ console.log("photo url",user?.photoURL);
             </label>
             <ul
               tabIndex={0}
-              className="menu z-40 menu-sm dropdown-content mt-3  p-2 shadow bg-base-100 rounded-box w-52"
+              className="menu z-40 menu-sm dropdown-content mt-3  p-2 shadow bg-red-500 rounded-box w-52"
             >
            {navLinks}
             </ul>
@@ -79,14 +79,13 @@ console.log("photo url",user?.photoURL);
           <ul className="menu menu-horizontal px-1">{navLinks}</ul>
         </div>
         <div className="navbar-end">
-          {/* <a className="btn">Login</a> */}
-
+  
           {user?.displayName? (
          
-              <button onClick={handleLogout} className="btn btn-primary bg-red-400 text-white"> Logout</button>
+              <button onClick={handleLogout} className="btn btn-primary bg-red-400 border-0 text-white"> Logout</button>
            
           ) : (
-            <Link to={"/login"}><button className="btn  bg-red-400 text-white"> Log in</button> </Link> 
+            <Link to={"/login"}><button className="btn border-0  bg-red-400 text-white"> Log in</button> </Link> 
           )}
         </div>
       </div>

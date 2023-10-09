@@ -27,7 +27,7 @@ const Home = () => {
       <div className="bg-slate-300">
       <Banner></Banner>
 
-      <div className="bg-red-500 flex items-center justify-center  h-20 my-10  text-white w-full">
+      <div className="bg-red-500  flex items-center justify-center  h-20 my-10  text-white w-full">
       <h1 className="   text-center text-4xl font-bold ">Services</h1>
       </div>
    
@@ -35,7 +35,7 @@ const Home = () => {
 
     
    
-      <div className="  grid pb-2  gap-10 lg:max-w-6xl lg:mx-auto mx-5 grid-cols-1  lg:grid-cols-2">
+      <div className="  grid pb-2 mt-20 gap-10 lg:max-w-6xl lg:mx-auto mx-5 grid-cols-1  lg:grid-cols-2">
      
 
 {

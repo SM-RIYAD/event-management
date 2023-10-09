@@ -9,7 +9,7 @@ useEffect(() => {  AOS.init();},[]);
 
     const {name,id,image,short_description,price,detailed_description}=event;
   return (
-    <div className="pb-20 ">
+    <div className="pb-6 ">
       <div data-aos="zoom-in" className="card   lg:h-60 lg:card-side md:card-side bg-base-100 shadow-xl">
         <figure className="lg:w-1/2 md:w-1/2  ">
           <img className="object-fill rounded-xl lg:h-full lg:w-auto"
